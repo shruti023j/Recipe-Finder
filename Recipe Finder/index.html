@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Recipe Finder</h1>
+        <p>Find delicious recipes from various categories</p>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search recipes..." oninput="searchRecipes()">
+            <button class="search-btn" onclick="searchRecipes()">Search</button>
+        </div>
+    </header>
+
+    <div class="filters">
+        <button class="filter" onclick="filterRecipes('breakfast')">Breakfast</button>
+        <button class="filter" onclick="filterRecipes('lunch')">Lunch</button>
+        <button class="filter" onclick="filterRecipes('dinner')">Dinner</button>
+        <button class="filter" onclick="resetFilter()">All</button>
+    </div>
+
+    <section class="recipes-container" id="recipes-container"></section>
+
+    <!-- Recipe Modal -->
+   
+<div class="modal" id="recipe-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img src="" alt="" id="modal-image">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <h3>Full Recipe:</h3>
+        <p id="modal-recipe"></p>
+        <button class="go-back-btn" onclick="closeModal()">Go Back</button>
+    </div>
+</div> <!-- Footer Section -->
+<footer>
+    <p><strong>Recipe Finder</strong></p>
+    <div>
+        <a href="#">About</a> | 
+        <a href="#">Recipes</a> | 
+        <a href="#">Tips</a> | 
+        <a href="#">Community</a> | 
+        <a href="#">Services</a> | 
+        <a href="#">Terms of Service</a> | 
+        <a href="#">Privacy Policy</a>
+    </div>
+    <div class="social-icons">
+        <a href="https://youtube.com" target="_blank">YouTube</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
